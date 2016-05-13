@@ -133,16 +133,17 @@ html {
   font-size: 16px;
   font-family: "Helvetica", sans-serif;
   vertical-align: top;
+  color: slategray;
 }
 
 /*html*/
-/* line 8, ../sass/_general.scss */
+/* line 9, ../sass/_general.scss */
 .left {
   float: left;
 }
 
 /*left*/
-/* line 13, ../sass/_general.scss */
+/* line 14, ../sass/_general.scss */
 .right {
   float: right;
 }
@@ -157,7 +158,7 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 100px 5%;
+  padding: 50px 5%;
   box-sizing: border-box;
 }
 
@@ -172,6 +173,9 @@ html {
   /*header*/
   /*back, close*/
   /*language*/
+  /*left-column*/
+  /*h1-span*/
+  /*li*/
 }
 /* line 9, ../sass/_container.scss */
 #container header {
@@ -197,6 +201,61 @@ html {
   color: slategray;
   margin: 5px auto 0;
   text-align: center;
+  font-weight: bold;
+}
+/* line 38, ../sass/_container.scss */
+#container .left-column {
+  width: 50%;
+  padding: 20px 0 0 5%;
+}
+/* line 44, ../sass/_container.scss */
+#container .h1-span {
+  display: block;
+}
+/* line 49, ../sass/_container.scss */
+#container .social-links {
+  margin: 25px 0 0;
+  /*li*/
+}
+/* line 52, ../sass/_container.scss */
+#container .social-links li {
+  display: inline-block;
+  margin: 0 12% 0 0;
+  /*i*/
+}
+/* line 56, ../sass/_container.scss */
+#container .social-links li i {
+  font-size: 2rem;
 }
 
 /*container*/
+/* line 1, ../sass/_text.scss */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/*h1*/
+/* line 7, ../sass/_text.scss */
+.h1-span {
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+/*h1-span*/
+/* line 13, ../sass/_text.scss */
+p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin: 15px 0 0;
+}
+
+/*p*/
+/* line 20, ../sass/_text.scss */
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: slategray;
+}
+
+/*a*/

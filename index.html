@@ -56,8 +56,112 @@
 				</li><!--vimeo-->
 			</ul><!--social-links-->
 		</div><!--left-column-->
+		<div id="right-column">
+			<img id="christophe" src="img/christophe.png" alt="Christophe Kerebel">
+		</div>
 	</div><!--container-->
 </div><!--main-->
+
+<!-- Add jQuery -->
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+<!-- Animation -->
+
+<script>
+
+	//Christophe Image Slides In
+	$(document).ready(function() {
+		$( "#christophe" ).animate({
+    		left: "-=88%",
+  		}, 5000, function() {
+    		// Animation complete.
+ 		});
+	
+
+		//Dribbble Click
+
+		$('#dribbble').click(function() {
+			$(this).css('background', 'pink');
+			$(this).css('border-radius', '100%');
+			$('html, a, .language, .back, .close').css('color', 'white');
+			$('.language').css('border-color', 'white');
+			$(this).find('.fa').css('background', 'white');
+			$(this).find('.fa').css('color', 'pink');
+			$(this).find('.fa').css('border-radius', '100%');
+			$(this).animate({
+	    		height: '10000px',
+	    		width: '10000px',
+	    		left: '-=5000px',
+	    		top: '-=5000px'
+	    		
+	  		}, 1000, function() {
+	    		// Animation complete.
+	 		});
+		});
+
+		//Behance Click
+
+		$('#behance').click(function() {
+			$(this).css('background', 'blue');
+			$(this).css('border-radius', '100%');
+			$('html, a, .language, .back, .close').css('color', 'white');
+			$('.language').css('border-color', 'white');
+			$(this).find('.fa').css('background', 'white');
+			$(this).find('.fa').css('color', 'blue');
+			$(this).find('.fa').css('border-radius', '100%');
+			$(this).animate({
+	    		height: '10000px',
+	    		width: '10000px',
+	    		left: '-=5000px',
+	    		top: '-=5000px'
+	    		
+	  		}, 1000, function() {
+	    		// Animation complete.
+	 		});
+		});
+
+		//Instagram Click
+
+		$('#instagram').click(function() {
+			$(this).css('background', 'darkblue');
+			$(this).css('border-radius', '100%');
+			$('html, a, .language, .back, .close').css('color', 'white');
+			$('.language').css('border-color', 'white');
+			$(this).find('.fa').css('background', 'white');
+			$(this).find('.fa').css('color', 'darkblue');
+			$(this).find('.fa').css('border-radius', '100%');
+			$(this).animate({
+	    		height: '10000px',
+	    		width: '10000px',
+	    		left: '-=5000px',
+	    		top: '-=5000px'
+	    		
+	  		}, 1000, function() {
+	    		// Animation complete.
+	 		});
+		});
+
+		//Vimeo Click
+
+		$('#vimeo').click(function() {
+			$(this).css('background', 'lightblue');
+			$(this).css('z-index', '500')
+			$(this).css('border-radius', '100%');
+			$('html, a, .language, .back, .close').css('color', 'white');
+			$('.language').css('border-color', 'white');
+			$(this).find('.fa').css('background', 'white');
+			$(this).find('.fa').css('color', 'lightblue');
+			$(this).find('.fa').css('border-radius', '100%');
+			$(this)
+				.animate({height: '10000px', width: '10000px', left: '-=5000px', top: '-=5000px'}, 1000)
+				.delay(5000).css('background', 'none');
+			$('#container')
+				.delay(1000).css('background', 'lightblue');
+		});
+
+	});
+</script>
 
 </body>
 </html>

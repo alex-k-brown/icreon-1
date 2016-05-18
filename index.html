@@ -31,34 +31,42 @@
 			<button class="close right">x</button><!--close-->
 		</header>
 		<div class="left-column">
-			<h1>Hello<span class="h1-span">World.</span></h1>
-			<p>I'm Cristophe Kerebel, the guy who created the photo and video gallery you like to visit and share my love for lights. I dedicated a full year to chase the marvelous lights of America, armed with nothing more than my beloved Canon camera.</p>
-			<p>Sorry, I stopped selling those pictures and devote myself today to my new job as a UX/UI designer. If you want to check out my portfolio, it's at <a href="http://christophekerebel.com/" target="_blank">christophekerebel.com</a></p>
-			<p>Still, catching the light is my pasion. You are welcome to bisit my new gallery at <a href="http://kreapx.com/" target "_blank">kreapx.com</a></p>
+			<h1 id ="h1">Hello<span class="h1-span">World.</span></h1>
+			<div id="text" class="text">
+				<p>I'm Cristophe Kerebel, the guy who created the photo and video gallery you like to visit and share my love for lights. I dedicated a full year to chase the marvelous lights of America, armed with nothing more than my beloved Canon camera.</p>
+				<p>Sorry, I stopped selling those pictures and devote myself today to my new job as a UX/UI designer. If you want to check out my portfolio, it's at <a href="http://christophekerebel.com/" target="_blank">christophekerebel.com</a></p>
+				<p>Still, catching the light is my pasion. You are welcome to bisit my new gallery at <a href="http://kreapx.com/" target "_blank">kreapx.com</a></p>
+			</div><!--text-->
 			<ul class="social-links">
 				<li class="social-container" id="dribbble">
 					<i class="fa fa-dribbble"></i>
+					<div id="dribbble-side" class="social-side"></div>
 				</li><!--dribble-->
 				<li class="social-container" id="behance">
 					<i class="fa fa-behance"></i>
+					<div id="behance-side" class="social-side"></div>
 				</li><!--behance-->
 				<li class="social-container" id="linkedin">
 					<i class="fa fa-linkedin"></i>
+					<div id="linkedin-side" class="social-side"></div>
 				</li><!--linkedin-->
 				<li class="social-container" id="twitter">
 					<i class="fa fa-twitter"></i>
+					<div id="twitter-side" class="social-side"></div>
 				</li><!--twitter-->
 				<li class="social-container" id="instagram">
 					<i class="fa fa-instagram"></i>
+					<div id="instagram-side" class="social-side"></div>
 				</li><!--instagram-->
 				<li class="social-container" id="vimeo">
 					<i class="fa fa-vimeo"></i>
+					<div id="vimeo-side" class="social-side"></div>
 				</li><!--vimeo-->
 			</ul><!--social-links-->
 		</div><!--left-column-->
 		<div id="right-column">
 			<img id="christophe" src="img/christophe.png" alt="Christophe Kerebel">
-		</div>
+		</div><!--right-column-->
 	</div><!--container-->
 </div><!--main-->
 
@@ -75,34 +83,40 @@
 	var socialMedia = new Object();
 
 	socialMedia.dribbble = new Object();
-	socialMedia.dribbble.color = 'pink'
-	socialMedia.dribbble.h1 = 'My <span class="h1-span">Dribbble</span>'
-	socialMedia.dribbble.text = 'Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.'
+	socialMedia.dribbble.color = '#e74486'
+	socialMedia.dribbble.h1 = 'My <span class="h1-span">Dribbble.</span>'
+	socialMedia.dribbble.text = '<p>Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.</p><a class="more-button" href="https://dribbble.com/christophekerebel" target="_blank">See more</a>'
+	socialMedia.dribbble.rightColumn = '<video autoplay loop class="right-video"><source src="video/slapping.mp4" type =\'video/mp4;codecs="avc1.42E01E, mp4a.40.2"\' /><source src="video/slapping.webm" type=\'video/webm;codecs="vp8, vorbis"\' /></video>'
 
 	socialMedia.behance = new Object();
-	socialMedia.behance.color = 'blue';
-	socialMedia.behance.h1 = 'My <span class="h1-span">Behance</span>'
-	socialMedia.behance.text = 'Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.'
+	socialMedia.behance.color = '#0073ff';
+	socialMedia.behance.h1 = 'My <span class="h1-span">Behance.</span>'
+	socialMedia.behance.text = '<p>Dandis reicipiendisque meritis quod quisque minus per se ipse posset, id acciperet ab alio. Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut</p><a class="more-button" href="https://www.behance.net/christophekerebel" target="_blank">See more</a>'
+	socialMedia.behance.rightColumn = '<video autoplay loop class="right-video"><source src="video/slapping.mp4" type =\'video/mp4;codecs="avc1.42E01E, mp4a.40.2"\' /><source src="video/slapping.webm" type=\'video/webm;codecs="vp8, vorbis"\' /></video>'
 
 	socialMedia.linkedin = new Object();
 	socialMedia.linkedin.color = 'orange';
-	socialMedia.linkedin.h1 = 'My <span class="h1-span">LinkedIn</span>'
-	socialMedia.linkedin.text = 'Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.'
+	socialMedia.linkedin.h1 = 'My <span class="h1-span">LinkedIn.</span>'
+	socialMedia.linkedin.text = '<p>Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.</p><a class="more-button" href="https://www.linkedin.com/in/christophekerebel" target="_blank">See more</a>'
+	socialMedia.linkedin.rightColumn = '<video autoplay loop class="right-video"><source src="video/slapping.mp4" type =\'video/mp4;codecs="avc1.42E01E, mp4a.40.2"\' /><source src="video/slapping.webm" type=\'video/webm;codecs="vp8, vorbis"\' /></video>'
 
 	socialMedia.twitter = new Object();
 	socialMedia.twitter.color = 'green';
-	socialMedia.dribbble.h1 = 'My <span class="h1-span">Twitter</span>'
-	socialMedia.dribbble.text = 'Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.'
+	socialMedia.twitter.h1 = 'My <span class="h1-span">Twitter.</span>'
+	socialMedia.twitter.text = '<p>Dandis reicipiendisque meritis quod quisque minus per se ipse posset, id acciperet ab alio. Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut</p><a class="more-button" href="https://twitter.com/chriskere" target="_blank">See more</a>'
+	socialMedia.twitter.rightColumn = '<video autoplay loop class="right-video"><source src="video/slapping.mp4" type =\'video/mp4;codecs="avc1.42E01E, mp4a.40.2"\' /><source src="video/slapping.webm" type=\'video/webm;codecs="vp8, vorbis"\' /></video>'
 
 	socialMedia.instagram = new Object();
-	socialMedia.instagram.color = 'darkblue';
-	socialMedia.instagram.h1 = 'My <span class="h1-span">Instagram</span>'
-	socialMedia.instagram.text = 'Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.'
+	socialMedia.instagram.color = '#1f5388';
+	socialMedia.instagram.h1 = 'My <span class="h1-span">Instagram.</span>'
+	socialMedia.instagram.text = '<p>Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.</p><a class="more-button" href="https://www.instagram.com/explore/tags/christophekerebel/" target="_blank">See more</a>'
+	socialMedia.instagram.rightColumn = '<video autoplay loop class="right-video"><source src="video/slapping.mp4" type =\'video/mp4;codecs="avc1.42E01E, mp4a.40.2"\' /><source src="video/slapping.webm" type=\'video/webm;codecs="vp8, vorbis"\' /></video>'
 
 	socialMedia.vimeo = new Object();
-	socialMedia.vimeo.color = 'lightblue';
-	socialMedia.vimeo.h1 = 'My <span class="h1-span">Vimeo</span>'
-	socialMedia.vimeo.text = 'Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.'
+	socialMedia.vimeo.color = '#00b9ef';
+	socialMedia.vimeo.h1 = 'My <span class="h1-span">Vimeo.</span>'
+	socialMedia.vimeo.text = '<p>Dandis reicipiendisque meritis quod quisque minus per se ipse posset, id acciperet ab alio. Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, </p><a class="more-button" href="https://vimeo.com/christophekerebel" target="_blank">See more</a>'
+	socialMedia.vimeo.rightColumn = '<video autoplay loop class="right-video"><source src="video/slapping.mp4" type =\'video/mp4;codecs="avc1.42E01E, mp4a.40.2"\' /><source src="video/slapping.webm" type=\'video/webm;codecs="vp8, vorbis"\' /></video>'
 
 	//Christophe Image Slides In
 	$(document).ready(function() {
@@ -123,11 +137,11 @@
 			
 			//Set Clicked .social-container Element to It's Corresponding Backgroud Color
 
-			$(this).css('background', socialMedia[socialId].color);
+			$('#' + socialId + '-side').css('background', socialMedia[socialId].color);
 
 			//Make .social-container Element a Circle
 
-			$(this).css('border-radius', '100%');
+			$('#' + socialId + '-side').css('border-radius', '100%');
 
 			//Change Text in #container to White
 
@@ -157,17 +171,34 @@
 
 			$(this).find('.fa').css('border-radius', '100%');
 
+			//Change Title for Each Card
+
+			$('#h1').html(socialMedia[socialId].h1);
+
+			//Change Text for Each Card
+
+			$('#text').html(socialMedia[socialId].text);
+
+			//Change Right Column for Each Card
+
+			$('#right-column').html(socialMedia[socialId].rightColumn);
+
 			//Animate Clicked .social-container Element to Grow & Fill Container Over 1 Second
 
-			$(this).animate({
+			$('#' + socialId + '-side').animate({
 	    		height: '10000px',
 	    		width: '10000px',
 	    		left: '-=5000px',
 	    		top: '-=5000px'
 	    		
-	  		}, 1000, function() {
-	    		// Animation complete.
-	 		});
+	  		}, 1000 );
+
+			//Animate Right Column on Click
+
+			$('.right-video').animate({
+	    		left: '-=110%'
+	    		
+	  		}, 500 );
 
 	 		//Run After Animation Complete
 
@@ -180,7 +211,7 @@
 
 				//Remove Added jQuery Styles from Social Media Container so it doewn't affect other button pushes
 
-				$('#' + socialId).removeAttr('style');
+				$('#' + socialId + '-side').removeAttr('style');
 			}, 1100);
 		});
 	});

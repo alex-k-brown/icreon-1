@@ -36,22 +36,22 @@
 			<p>Sorry, I stopped selling those pictures and devote myself today to my new job as a UX/UI designer. If you want to check out my portfolio, it's at <a href="http://christophekerebel.com/" target="_blank">christophekerebel.com</a></p>
 			<p>Still, catching the light is my pasion. You are welcome to bisit my new gallery at <a href="http://kreapx.com/" target "_blank">kreapx.com</a></p>
 			<ul class="social-links">
-				<li id="dribbble">
+				<li class="social-container" id="dribbble">
 					<i class="fa fa-dribbble"></i>
 				</li><!--dribble-->
-				<li id="behance">
+				<li class="social-container" id="behance">
 					<i class="fa fa-behance"></i>
 				</li><!--behance-->
-				<li id="linkedin">
+				<li class="social-container" id="linkedin">
 					<i class="fa fa-linkedin"></i>
 				</li><!--linkedin-->
-				<li id="twitter">
+				<li class="social-container" id="twitter">
 					<i class="fa fa-twitter"></i>
 				</li><!--twitter-->
-				<li id="instagram">
+				<li class="social-container" id="instagram">
 					<i class="fa fa-instagram"></i>
 				</li><!--instagram-->
-				<li id="vimeo">
+				<li class="social-container" id="vimeo">
 					<i class="fa fa-vimeo"></i>
 				</li><!--vimeo-->
 			</ul><!--social-links-->
@@ -70,6 +70,40 @@
 
 <script>
 
+	//Social Media Object - Holds info about colors
+
+	var socialMedia = new Object();
+
+	socialMedia.dribbble = new Object();
+	socialMedia.dribbble.color = 'pink'
+	socialMedia.dribbble.h1 = 'My <span class="h1-span">Dribbble</span>'
+	socialMedia.dribbble.text = 'Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.'
+
+	socialMedia.behance = new Object();
+	socialMedia.behance.color = 'blue';
+	socialMedia.behance.h1 = 'My <span class="h1-span">Behance</span>'
+	socialMedia.behance.text = 'Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.'
+
+	socialMedia.linkedin = new Object();
+	socialMedia.linkedin.color = 'orange';
+	socialMedia.linkedin.h1 = 'My <span class="h1-span">LinkedIn</span>'
+	socialMedia.linkedin.text = 'Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.'
+
+	socialMedia.twitter = new Object();
+	socialMedia.twitter.color = 'green';
+	socialMedia.dribbble.h1 = 'My <span class="h1-span">Twitter</span>'
+	socialMedia.dribbble.text = 'Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.'
+
+	socialMedia.instagram = new Object();
+	socialMedia.instagram.color = 'darkblue';
+	socialMedia.instagram.h1 = 'My <span class="h1-span">Instagram</span>'
+	socialMedia.instagram.text = 'Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.'
+
+	socialMedia.vimeo = new Object();
+	socialMedia.vimeo.color = 'lightblue';
+	socialMedia.vimeo.h1 = 'My <span class="h1-span">Vimeo</span>'
+	socialMedia.vimeo.text = 'Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.'
+
 	//Christophe Image Slides In
 	$(document).ready(function() {
 		$( "#christophe" ).animate({
@@ -79,16 +113,52 @@
  		});
 	
 
-		//Dribbble Click
+		//.social-container Click - Animate Growing Circle Background Change
 
-		$('#dribbble').click(function() {
-			$(this).css('background', 'pink');
+		$('.social-container').click(function() {
+
+			//socialId Holding Variable - Get Id of element & Save It
+
+			var socialId = $(this).attr('id');
+			
+			//Set Clicked .social-container Element to It's Corresponding Backgroud Color
+
+			$(this).css('background', socialMedia[socialId].color);
+
+			//Make .social-container Element a Circle
+
 			$(this).css('border-radius', '100%');
+
+			//Change Text in #container to White
+
 			$('html, a, .language, .back, .close').css('color', 'white');
+
+			//Change Border Color of .language elements to white
+
 			$('.language').css('border-color', 'white');
+
+			//Reset All .fa Elements (Social Media Icons) to have no background
+
+			$('.fa').css('background', 'none');
+
+			//Reset All .fa Element (Social Media Icons) to be white
+
+			$('.fa').css('color', 'white');
+
+			//Change Background Color of .fa element (Social Media Icon) to White
+
 			$(this).find('.fa').css('background', 'white');
-			$(this).find('.fa').css('color', 'pink');
+
+			//Change Color of .fa Element (Social Media Icon) to Corresponding Color
+
+			$(this).find('.fa').css('color', socialMedia[socialId].color);
+
+			//Make .fa Element (Social Media Icon) a Circle
+
 			$(this).find('.fa').css('border-radius', '100%');
+
+			//Animate Clicked .social-container Element to Grow & Fill Container Over 1 Second
+
 			$(this).animate({
 	    		height: '10000px',
 	    		width: '10000px',
@@ -98,68 +168,21 @@
 	  		}, 1000, function() {
 	    		// Animation complete.
 	 		});
+
+	 		//Run After Animation Complete
+
+
+	 		setTimeout(function () {
+
+	 			//Change Background Color of Container
+
+				$('#container').css('background', socialMedia[socialId].color);
+
+				//Remove Added jQuery Styles from Social Media Container so it doewn't affect other button pushes
+
+				$('#' + socialId).removeAttr('style');
+			}, 1100);
 		});
-
-		//Behance Click
-
-		$('#behance').click(function() {
-			$(this).css('background', 'blue');
-			$(this).css('border-radius', '100%');
-			$('html, a, .language, .back, .close').css('color', 'white');
-			$('.language').css('border-color', 'white');
-			$(this).find('.fa').css('background', 'white');
-			$(this).find('.fa').css('color', 'blue');
-			$(this).find('.fa').css('border-radius', '100%');
-			$(this).animate({
-	    		height: '10000px',
-	    		width: '10000px',
-	    		left: '-=5000px',
-	    		top: '-=5000px'
-	    		
-	  		}, 1000, function() {
-	    		// Animation complete.
-	 		});
-		});
-
-		//Instagram Click
-
-		$('#instagram').click(function() {
-			$(this).css('background', 'darkblue');
-			$(this).css('border-radius', '100%');
-			$('html, a, .language, .back, .close').css('color', 'white');
-			$('.language').css('border-color', 'white');
-			$(this).find('.fa').css('background', 'white');
-			$(this).find('.fa').css('color', 'darkblue');
-			$(this).find('.fa').css('border-radius', '100%');
-			$(this).animate({
-	    		height: '10000px',
-	    		width: '10000px',
-	    		left: '-=5000px',
-	    		top: '-=5000px'
-	    		
-	  		}, 1000, function() {
-	    		// Animation complete.
-	 		});
-		});
-
-		//Vimeo Click
-
-		$('#vimeo').click(function() {
-			$(this).css('background', 'lightblue');
-			$(this).css('z-index', '500')
-			$(this).css('border-radius', '100%');
-			$('html, a, .language, .back, .close').css('color', 'white');
-			$('.language').css('border-color', 'white');
-			$(this).find('.fa').css('background', 'white');
-			$(this).find('.fa').css('color', 'lightblue');
-			$(this).find('.fa').css('border-radius', '100%');
-			$(this)
-				.animate({height: '10000px', width: '10000px', left: '-=5000px', top: '-=5000px'}, 1000)
-				.delay(5000).css('background', 'none');
-			$('#container')
-				.delay(1000).css('background', 'lightblue');
-		});
-
 	});
 </script>
 

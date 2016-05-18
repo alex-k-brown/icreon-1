@@ -85,7 +85,7 @@
 	socialMedia.dribbble = new Object();
 	socialMedia.dribbble.color = '#e74486'
 	socialMedia.dribbble.h1 = 'My <span class="h1-span">Dribbble.</span>'
-	socialMedia.dribbble.text = '<p>Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.</p><a class="more-button" href="https://dribbble.com/christophekerebel" target="_blank">See more</a>'
+	socialMedia.dribbble.text = '<p>Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.</p><a class="more-button" href="https://www.linkedin.com/in/christophekerebel" target="_blank">See more</a>'
 	socialMedia.dribbble.rightColumn = '<video autoplay loop class="right-video"><source src="video/slapping.mp4" type =\'video/mp4;codecs="avc1.42E01E, mp4a.40.2"\' /><source src="video/slapping.webm" type=\'video/webm;codecs="vp8, vorbis"\' /></video>'
 
 	socialMedia.behance = new Object();
@@ -103,26 +103,26 @@
 	socialMedia.twitter = new Object();
 	socialMedia.twitter.color = 'green';
 	socialMedia.twitter.h1 = 'My <span class="h1-span">Twitter.</span>'
-	socialMedia.twitter.text = '<p>Dandis reicipiendisque meritis quod quisque minus per se ipse posset, id acciperet ab alio. Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut</p><a class="more-button" href="https://twitter.com/chriskere" target="_blank">See more</a>'
+	socialMedia.twitter.text = '<p>Dandis reicipiendisque meritis quod quisque minus per se ipse posset, id acciperet ab alio. Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut</p><a class="more-button" href="https://www.linkedin.com/in/christophekerebel" target="_blank">See more</a>'
 	socialMedia.twitter.rightColumn = '<video autoplay loop class="right-video"><source src="video/slapping.mp4" type =\'video/mp4;codecs="avc1.42E01E, mp4a.40.2"\' /><source src="video/slapping.webm" type=\'video/webm;codecs="vp8, vorbis"\' /></video>'
 
 	socialMedia.instagram = new Object();
 	socialMedia.instagram.color = '#1f5388';
 	socialMedia.instagram.h1 = 'My <span class="h1-span">Instagram.</span>'
-	socialMedia.instagram.text = '<p>Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.</p><a class="more-button" href="https://www.instagram.com/explore/tags/christophekerebel/" target="_blank">See more</a>'
+	socialMedia.instagram.text = '<p>Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, ut dandis recipiendisque meritis quod quisqui minus per se ipse posset, id acciperet ab alio.</p><a class="more-button" href="https://www.linkedin.com/in/christophekerebel" target="_blank">See more</a>'
 	socialMedia.instagram.rightColumn = '<video autoplay loop class="right-video"><source src="video/slapping.mp4" type =\'video/mp4;codecs="avc1.42E01E, mp4a.40.2"\' /><source src="video/slapping.webm" type=\'video/webm;codecs="vp8, vorbis"\' /></video>'
 
 	socialMedia.vimeo = new Object();
 	socialMedia.vimeo.color = '#00b9ef';
 	socialMedia.vimeo.h1 = 'My <span class="h1-span">Vimeo.</span>'
-	socialMedia.vimeo.text = '<p>Dandis reicipiendisque meritis quod quisque minus per se ipse posset, id acciperet ab alio. Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, </p><a class="more-button" href="https://vimeo.com/christophekerebel" target="_blank">See more</a>'
+	socialMedia.vimeo.text = '<p>Dandis reicipiendisque meritis quod quisque minus per se ipse posset, id acciperet ab alio. Saepissime igitur mihi de amicitia cogitanti maxime illud considerandum videri solet, utrum propter imb cillitatem atque inopiam desiderata sit amicitia, </p><a class="more-button" href="https://www.linkedin.com/in/christophekerebel" target="_blank">See more</a>'
 	socialMedia.vimeo.rightColumn = '<video autoplay loop class="right-video"><source src="video/slapping.mp4" type =\'video/mp4;codecs="avc1.42E01E, mp4a.40.2"\' /><source src="video/slapping.webm" type=\'video/webm;codecs="vp8, vorbis"\' /></video>'
 
 	//Christophe Image Slides In
 	$(document).ready(function() {
 		$( "#christophe" ).animate({
     		left: "-=88%",
-  		}, 5000, function() {
+  		}, 1000, function() {
     		// Animation complete.
  		});
 	
@@ -198,7 +198,7 @@
 			$('.right-video').animate({
 	    		left: '-=110%'
 	    		
-	  		}, 500 );
+	  		}, 250 ).delay().animate({left: '+=2%'}, 120).delay().animate({left: '-=1%'}, 120);
 
 	 		//Run After Animation Complete
 

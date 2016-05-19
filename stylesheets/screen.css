@@ -185,7 +185,7 @@ html {
   /*social-side*/
   /*dribbble-side*/
   /*social-container*/
-  /*right-video*/
+  /*right-content*/
 }
 /* line 11, ../sass/_container.scss */
 #container header {
@@ -308,7 +308,7 @@ html {
   margin: 0 0 30px 0;
 }
 /* line 138, ../sass/_container.scss */
-#container .right-video {
+#container .right-content {
   width: 95%;
   z-index: 1000;
   position: relative;
